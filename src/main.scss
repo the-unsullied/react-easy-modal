@@ -53,7 +53,7 @@
   text-align: center;
   background: #fbfbfb;
   position: relative;
-  padding: 5px;
+  padding: 10px;
   @include media-query(palm) {
     font-size: $text-base-size-palm;
   }
