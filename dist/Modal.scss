@@ -1,0 +1,74 @@
+.modal {
+  position: fixed;
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  background: transparent;
+  top: 0;
+  left: 0;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  will-change: background;
+  @include vendor(transition, all $base-animation-length ease);
+  @include media-query(palm) {
+    @include vendor(transform, translateZ(2px));
+  }
+}
+
+.modal--showing {
+  background: rgba(0,0,0,0.6);
+  @include media-query(palm) {
+    background: transparent;
+  }
+  .modal__content {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.modal__content {
+  background: white;
+  width: 500px;
+  min-height: 200px;
+  margin: 50px auto;
+  z-index: 9999;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 0 15px black;
+  position: relative;
+  top: 10px;
+  opacity: 0;
+  will-change: top, opacity;
+  @include vendor(transition, all $base-animation-length ease);
+  @include media-query(palm) {
+    width: 100%;
+    margin: 0;
+    min-height: 100%;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+
+.modal__header {
+  text-align: center;
+  background: #fbfbfb;
+  position: relative;
+  @include media-query(palm) {
+    font-size: $text-base-size-palm;
+  }
+}
+
+.modal__close {
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  color: rgba(0,0,0,0.3);
+  font-size: 2em;
+  cursor: pointer;
+  &:hover {
+    color: #333;
+  }
+  @include media-query(palm) {
+    font-size: $icon-base-size-palm;
+  }
+}
