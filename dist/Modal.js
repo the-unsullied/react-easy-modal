@@ -83,7 +83,7 @@ exports.default = _react2.default.createClass({
         { className: 'modal__content' },
         _react2.default.createElement(
           'div',
-          { className: 'modal__header u-p-' },
+          { className: 'modal__header' },
           !this.props.disableClose ? _react2.default.createElement(
             'div',
             { className: 'modal__close' },
@@ -91,7 +91,7 @@ exports.default = _react2.default.createClass({
           ) : null,
           _react2.default.createElement(
             'h3',
-            { className: 'u-mv0' },
+            null,
             this.props.header
           )
         ),

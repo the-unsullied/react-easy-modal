@@ -66,11 +66,11 @@ export default React.createClass({
   render() {
     return <div className={classnames('modal', {'modal--showing': this.state.isShowing})} onClick={this.close}>
       <div className="modal__content">
-        <div className="modal__header u-p-">
+        <div className="modal__header">
           {!this.props.disableClose ? <div className="modal__close">
             <i className="modal__close-icon icon-close" onClick={this.close}></i>
           </div> : null}
-          <h3 className="u-mv0">{this.props.header}</h3>
+          <h3>{this.props.header}</h3>
         </div>
         {this.props.children}
       </div>

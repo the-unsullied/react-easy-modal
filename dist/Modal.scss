@@ -53,9 +53,14 @@
   text-align: center;
   background: #fbfbfb;
   position: relative;
+  padding: 5px;
   @include media-query(palm) {
     font-size: $text-base-size-palm;
   }
+}
+
+.modal__header h3 {
+  margin:  0;
 }
 
 .modal__close {
