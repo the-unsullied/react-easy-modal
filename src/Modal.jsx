@@ -48,7 +48,7 @@ export default React.createClass({
   close(e) {
     e.stopPropagation();
     const { classList } = e.target;
-    const shouldClose = classList.contains('modal') || classList.contains('modal__close-icon');
+    const shouldClose = classList.contains('unsullied-modal') || classList.contains('unsullied-modal__close');
     if(shouldClose && !this.props.disableClose) {
       this.performClose();
     }
@@ -64,11 +64,11 @@ export default React.createClass({
   },
 
   render() {
-    return <div className={classnames('modal', {'modal--showing': this.state.isShowing})} onClick={this.close}>
-      <div className="modal__content">
-        <div className="modal__header">
+    return <div className={classnames('unsullied-modal', {'unsullied-modal--showing': this.state.isShowing})} onClick={this.close}>
+      <div className="unsullied-modal__content">
+        <div className="unsullied-modal__header">
           {!this.props.disableClose ? <div className="modal__close">
-            <i className="modal__close-icon icon-close" onClick={this.close}></i>
+            <i className="unsullied-modal__close unsullied-icon-close" onClick={this.close}></i>
           </div> : null}
           <h3>{this.props.header}</h3>
         </div>

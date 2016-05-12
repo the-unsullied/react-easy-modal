@@ -59,7 +59,7 @@ exports.default = _react2.default.createClass({
     e.stopPropagation();
     var classList = e.target.classList;
 
-    var shouldClose = classList.contains('modal') || classList.contains('modal__close-icon');
+    var shouldClose = classList.contains('unsullied-modal') || classList.contains('unsullied-modal__close');
     if (shouldClose && !this.props.disableClose) {
       this.performClose();
     }
@@ -77,17 +77,17 @@ exports.default = _react2.default.createClass({
   render: function render() {
     return _react2.default.createElement(
       'div',
-      { className: (0, _classnames2.default)('modal', { 'modal--showing': this.state.isShowing }), onClick: this.close },
+      { className: (0, _classnames2.default)('unsullied-modal', { 'unsullied-modal--showing': this.state.isShowing }), onClick: this.close },
       _react2.default.createElement(
         'div',
-        { className: 'modal__content' },
+        { className: 'unsullied-modal__content' },
         _react2.default.createElement(
           'div',
-          { className: 'modal__header' },
+          { className: 'unsullied-modal__header' },
           !this.props.disableClose ? _react2.default.createElement(
             'div',
             { className: 'modal__close' },
-            _react2.default.createElement('i', { className: 'modal__close-icon icon-close', onClick: this.close })
+            _react2.default.createElement('i', { className: 'unsullied-modal__close unsullied-icon-close', onClick: this.close })
           ) : null,
           _react2.default.createElement(
             'h3',
