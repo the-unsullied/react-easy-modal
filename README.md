@@ -2,6 +2,8 @@
 
 Very simple react component that presents content via modal.
 
+![React Modal](https://github.com/the-unsullied/react-easy-modal/blob/demo/modaldemo.gif)
+
 ## Params
 
 **header** {String} Header that appears above modal.
