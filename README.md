@@ -4,6 +4,33 @@ Very simple react component that presents content via modal.
 
 ![React Modal](https://github.com/the-unsullied/react-easy-modal/blob/demo/modaldemo.gif)
 
+
+## Install
+```
+  npm i unsullied-react-modal --save
+```
+
+## Usage
+```
+  import Modal from 'unsullied-react-modal';
+  
+  React.createClass({
+    saveNote() {
+      console.log(this.state.note);
+    },
+    
+    render() {
+      return <Modal header='Create Note'
+              handleClose={goBack}>
+        <textarea value={this.state.note}/>
+        <button onClick={this.saveNote}>
+          Save
+        </button>
+      </Modal>
+    }
+  
+  });
+```
 ## Params
 
 **header** {String} Header that appears above modal.
