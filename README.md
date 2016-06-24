@@ -1,4 +1,4 @@
-# react-simple-modal
+# unsullied-react-modal
 
 Very simple react component that presents content via modal.
 
