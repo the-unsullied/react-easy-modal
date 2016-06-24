@@ -15,18 +15,29 @@ Very simple react component that presents content via modal.
   import Modal from 'unsullied-react-modal';
   
   React.createClass({
+    getInitialState() {
+      return {
+        note: '',
+        showModal: false
+      }
+    },
     saveNote() {
       console.log(this.state.note);
+      this.setState({ showModal: false });
     },
     
     render() {
-      return <Modal header='Create Note'
-              handleClose={goBack}>
-        <textarea value={this.state.note}/>
-        <button onClick={this.saveNote}>
-          Save
-        </button>
-      </Modal>
+      return {
+        this.state.showModal ?
+        
+        <Modal header='Create Note'
+          handleClose={goBack}>
+          <textarea value={this.state.note}/>
+          <button onClick={this.saveNote}>
+            Save
+          </button>
+        </Modal> : null
+      }
     }
   
   });
