@@ -31,7 +31,7 @@ Very simple react component that presents content via modal.
         this.state.showModal ?
         
         <Modal header='Create Note'
-          handleClose={goBack}>
+          handleClose={() => console.log('modal is closing')}>
           <textarea value={this.state.note}/>
           <button onClick={this.saveNote}>
             Save
